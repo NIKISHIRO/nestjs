@@ -7,13 +7,14 @@ export class UsersController {
     public service: UsersService,
   ) {}
 
-  @Get()
-  getUsers() {
-    return 'lol';
-  }
+  @Get('add')
+  async addUser() {
+    const response = this.service.addUser({
+      login: 'SEXDAMIR2',
+      password: 'SEXMORJ3',
+      email: 'SEXNASRTDINOV@damir.com4',
+    });
 
-  @Get('2')
-  getUsers2() {
-    return 'lol2';
+    return response;
   }
 }

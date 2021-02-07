@@ -11,10 +11,12 @@ async function bootstrap() {
     .setDescription('JS Code Video Tutorial endpoints')
     .setVersion('1.0')
     .build();
+
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
   app.enableCors();
 
-  await app.listen(3000);
+  await app.listen(3001);
 }
+
 bootstrap();
